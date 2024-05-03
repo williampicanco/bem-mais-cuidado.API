@@ -1,5 +1,6 @@
 
 using bem_mais_cuidado.API.Data;
+using bem_mais_cuidado.API.Entities;
 
 namespace bem_mais_cuidado.API
 {
@@ -11,6 +12,8 @@ namespace bem_mais_cuidado.API
 
             // Add services to the container.
 
+            //** add AddSingleton para persistir em memória
+            builder.Services.AddSingleton<AgendamentoBemMaisCuidadoDbContext>();
             
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
